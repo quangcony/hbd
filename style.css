@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, #ffe9ab, #fda1aa, #fb86a5);
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f1e2;
+  width: 800px;
+  height: 420px;
+  padding: 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.box .title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ffe9ab, #fda1aa, #fb86a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+.box .cake {
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box .name {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #fb86a5;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+.box .date {
+  color: #fb86a5;
+}
+.box .icon-left,
+.box .icon-right {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 20px;
+}
+
+.box .icon-left {
+  background-image: url("assets/imgs/blow.png");
+  left: 50px;
+  transform: rotate(-15deg);
+}
+.box .icon-right {
+  background-image: url("assets/imgs/blow_right.png");
+  right: 50px;
+  transform: rotate(15deg);
+}
