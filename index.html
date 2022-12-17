@@ -19,7 +19,59 @@
         <p class="date">17-12-2022</p>
         <div class="icon-left"></div>
         <div class="icon-right"></div>
+        <div class="line line-bot-left"></div>
+        <div class="line line-bot-right"></div>
+        <div class="line line-top-left"></div>
+        <div class="line line-top-right"></div>
+        <div class="rectangle"></div>
+        <button class="btn btn-open" id="open">Open</button>
+        <div class="wish-hbd">
+          <div class="card">
+            <div
+              class="avatar"
+              style="background-image: url('assets/imgs/haivan.jpg')"
+            ></div>
+            <div class="card-body">
+              <h3>Happy birthday to Kieu Linh!</h3>
+              <h5>17-12-2022</h5>
+              <p>
+                Chúc K.Linh tuổi mới thật nhiều sức khỏe, sớm thành công trong
+                công việc và cuộc sống. Mọi người thương yêu nhiều hơn nữa. Điều
+                quan trọng là sớm tốt nghiệp ra trường, tìm được một chỗ làm có
+                tâm và có tầm. May mắn sẽ luôn theo đuổi &#128522;. Sẽ có được
+                một người đàn ông lý tưởng che chở và yêu thương suốt đời. Đến
+                một ngày gặp lại, tui sẽ rủ bà đi nhậu để ăn mừng cho ngày hôm
+                nay - ngày đặc biệt này 🍻. <br />
+                Hẹn gặp lại một ngày gần nhất! À còn câu cuối nữa, nhớ tìm nhen
+                🤓.
+              </p>
+            </div>
+            <button class="btn btn-close" id="close">Đóng</button>
+          </div>
+        </div>
       </div>
+      <audio loop id="audio">
+        <source src="assets/media/hppd.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </div>
+    <script type="text/javascript">
+      const open = document.getElementById("open");
+      const audio = document.querySelector("#audio");
+      const close = document.getElementById("close");
+      const wish = document.querySelector(".wish-hbd");
+      open.addEventListener("click", () => {
+        if (audio.paused) {
+          audio.play();
+          wish.classList.add("active");
+        }
+      });
+      close.addEventListener("click", () => {
+        if (audio.play) {
+          audio.pause();
+          wish.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>
